@@ -28,8 +28,8 @@ summary(myplot)
 
 ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + 
   geom_point()+ facet_grid(. ~ Species)
-#facet grid 
-#facet wrap 
+#facet grid:
+#facet wrap:
 
 library(RColorBrewer)
 display.brewer.all()
@@ -38,3 +38,14 @@ df <- melt(iris, id.vars = "Species")
 ggplot(df, aes(Species, value, fill=variable))+
   geom_bar(stat= "identity", position="dodge")+
   scale_fill_brewer(palette ="Set1")
+
+#geom_ribbon: can be used for error range, confidence level, will shade that region 
+#scale_y_continuous: customize y label
+#geom_histogram: set bin with "binwidth", "colour" is color filled in 
+#geom_bar(stat=""): stacked all the values 
+#geom_bar(stat="identity"): bar will show max values 
+#theme(): customize your own theme; can just call it when you want to use it
+#ggsave(file=".png, .jpg, etc")
+
+
+
